@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">hola soy un footer
+    </div>
+
+
+    <div>
+        <button id="jsstyle" onclick="js_style()">remover footer</button>
+    </div>
+
+    <script>
+/*1*/   var elementoSinQry = document.getElementById("container");
+/*2*/   var elementoQry = document.querySelector("#container");
+/*3*/   var elementosClase = document.querySelectorAll(".second");
+/*4*/   var elementoOl = document.querySelector("ol.third");
+/*5*/   var elemetoContainer = document.querySelector("#container");
+        elemetoContainer.append("Hola!");
+
+/*6*/   var fot = document.querySelector(".footer");
+        fot.classList.add("main");
+
+/*7*/   fot.classList.remove("main");
+
+/*8*/   var lista = document.createElement("li");
+
+/*9*/   lista.innerText = "four";
+
+/*10*/  var list = document.querySelector("ul");
+        list.appendChild(lista);
+
+
+        // Desafiate a ti mismo
+
+        //ciclo para pintar de color verde
+        var li = document.querySelectorAll("ol li");
+        for (let i = 0; i < li.length; i++) {
+            li[i].style.backgroundColor = "green";
+        }
+
+        // eliminar el footer
+        function js_style() {
+            var footer = document.querySelector(".footer");
+            footer.remove();
+        }
+    </script>
+
+
+
+</body>
+
+</html>
